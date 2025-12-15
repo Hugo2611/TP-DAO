@@ -1,0 +1,22 @@
+<Window x:Class="WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dessin - WPF" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" Background="White" Margin="10">
+            <Canvas x:Name="canvasDessin"/>
+        </Border>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+            <Button x:Name="btnDessiner" Content="Dessiner" Width="100" Height="30" Click="btnDessiner_Click"/>
+            <Button x:Name="btnChargerJSON" Content="Charger JSON" Width="120" Height="30" Margin="10,0,0,0" Click="btnChargerJSON_Click"/>
+            <Button x:Name="btnSauverJSON" Content="Sauver JSON" Width="120" Height="30" Margin="10,0,0,0" Click="btnSauverJSON_Click"/>
+            <Button x:Name="btnLogEvents" Content="LogEvents" Width="100" Height="30" Margin="10,0,0,0" Click="btnLogEvents_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
